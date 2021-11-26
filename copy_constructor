@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class test
+{
+	int i;
+	public:
+		test()//default constructor
+		{
+			cout<<"default constructor"<<endl;
+			i=0;
+		}
+		test(int a)//parameterized constructor
+		{
+			cout<<"parameterized constructor"<<endl;
+			i=a;
+		}
+		test(const test &x)//copy constructor
+		{
+			cout<<"copy constructor"<<endl;
+			i=x.i;
+		}
+		void show()
+		{
+			cout<<i<<endl;
+		}
+};
+int main()
+{
+	test a(100);
+	a.show();
+	test b(a);//copy constructor invoked
+	b.show();
+	return 0;
+}
+Output:
+parameterized constructor
+100
+copy constructor
+100
