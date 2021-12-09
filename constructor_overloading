@@ -1,3 +1,7 @@
+Develop a C++ program illustrating Constructor overloading.
+
+program:
+
 #include<iostream>
 using namespace std;
 class num
@@ -25,6 +29,8 @@ int main()
 	x.add();
 	return 0;	
 }
+
 Output:
+
 sum of 10 and 20 is: 30
 sum of 1 and 2 is: 3
