@@ -1,3 +1,7 @@
+Develop a C++ program illustrating Copy Constructor.
+
+program:
+
 #include<iostream>
 using namespace std;
 class test
@@ -32,7 +36,9 @@ int main()
 	b.show();
 	return 0;
 }
+
 Output:
+
 parameterized constructor
 100
 copy constructor
