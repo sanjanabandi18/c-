@@ -1,0 +1,35 @@
+Program:
+#include<iostream>
+#include<cmath>
+using namespace std; 
+int main() 
+{ 
+float a,b,c,r1,r2,dis,realpart,imaginarypart; 
+cout<<"enter the coefficients of a,b and c "; 
+cin >>a >>b >>c; 
+dis = (b*b)-4*a*c; 
+if (dis>0) 
+{ 
+r1 =(-b+sqrt(dis)) / (2*a); 
+r2 =(-b-sqrt(dis)) / (2*a); 
+cout << "roots are real and different." <<endl; 
+cout << "r1 =" << r1 <<endl; 
+cout << "r2 =" << r2 <<endl; 
+} 
+else if (dis==0) 
+{ 
+r1 =(-b/2*a); 
+cout << "roots are real and equal." <<endl; 
+cout << "r1 = r2=" << r1 <<endl; 
+} 
+else 
+{ 
+cout << "roots are imaginary." <<endl; 
+} 
+} 
+
+output:
+
+enter the coefficients of a,b and c 1 4 4
+roots are real and equal.
+r1 = r2=-2
