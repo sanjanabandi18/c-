@@ -1,0 +1,92 @@
+8.3) Develop a C++ program to illustrate Virtual Base Class.
+
+program:
+
+#include<iostream>
+using namespace std;
+class student
+{
+int rno;
+public:
+	void getnumber()
+	{
+		cout<<"enter roll no: ";
+		cin>>rno;
+	}
+	void putnumber()
+	{
+		cout<<"\n \n \t roll no:"<<rno<<endl;
+	}
+};
+class test:virtual public student
+{
+	public:
+		int part1,part2;
+		void getmarks()
+		{
+			cout<<"enter marks \n";
+			cout<<"part 1:";
+			cin>>part1;
+			cout<<"part 2:";
+			cin>>part2;
+		}
+		void putmarks()
+		{
+			cout<<"\t marks obtained \n";
+			cout<<"\n \t part1: "<<part1;
+			cout<<"\n \t part 2: "<<part2;
+		}
+		};
+		class sports:public virtual student
+		{
+			public:
+				int score;
+					void getscore()
+					{
+						cout<<"enter sports score: ";
+						cin>>score;
+					}
+					void putscore()
+					{
+						cout<<"\n \t sports.score is:"<<score;
+					}
+				};
+				class result:public test,public sports
+				{
+					int total;
+					public:
+						void display()
+						{
+							total=part1+part2+score;
+							putnumber();
+							putmarks();
+							putscore();
+							cout<<"\n \t total score "<<total<<endl;
+						}
+					};
+					int main()
+					{
+						result obj;
+						obj.getnumber();
+						obj.getmarks();
+						obj.getscore();
+						obj.display();
+						return 0;
+					}
+						
+	output:
+  
+  enter roll no: 234
+enter marks
+part 1:87
+part 2:92
+enter sports score: 95
+
+
+         roll no:234
+         marks obtained
+
+         part1: 87
+         part 2: 92
+         sports.score is:95
+         total score 274
