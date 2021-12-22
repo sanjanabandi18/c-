@@ -1,0 +1,50 @@
+9.1)Develop a C++ program to illustrate virtual functions. 
+
+program:
+
+#include<iostream>
+using namespace std;
+class base
+{
+	public:
+		virtual void show()
+		{
+			cout<<"show()of base class"<<endl;
+			
+		}
+	};
+	class derived:public base
+	{
+		public:
+			void show()
+			{
+				cout<<"show of derived class";
+				
+			}
+};
+int main()
+{
+	base b,*bptr;
+	bptr=&b;
+	bptr->show();
+	derived d,*dptr;
+	bptr=&d;
+	bptr->show();
+	return 0;
+	
+}
+	
+output:
+
+show()of base class
+show of derived class
+
+
+9.2) Develop a C++ program to illustrate runtime polymorphism.
+
+program:
+
+
+
+9.3) Develop a C++ program to illustrate pure virtual function and calculate the
+area of different shapes by using abstract class.
